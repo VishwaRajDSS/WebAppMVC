@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+        <h2>Home</h2>
+
+<a href="/Home/Sayhello?name=Vamshi" target="_blank">Call Hello</a>
+        
+        <br />
+ @ViewBag.vb <br />
+ @ViewData["vd"] <br />
+ @TempData["td"] <br />
+
+@{ 
+    int a = 10, b = 20;
+    int c = a + b;
+}
+
+Result: @c

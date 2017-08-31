@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Default - Index</h2>
+enter first number:
+<input id="txt1" type="text" />
+<br />
+enter second number:
+
+<input id="txt2" type="text" /><span id="spn" style="color:red;"></span>
+<br/>
+
+<input id="Button1" type="button" value="Addition" onclick="add()" />
+<input id="Button1" type="button" value="Subtraction" onclick="sub()" />
+<br />
+<input id="Button1" type="button" value="Multiplication" onclick="mul()" />
+<input id="Button1" type="button" value="Devision" onclick="div()" />
+<br />
+<input id="Button1" type="button" value="Madulous" onclick="mad()" />
+
+@section scripts{
+<script>
+    function val()
+    {
+        
+        if (isNaN(a)) {
+            alert("Please enter first number..");
+            return false;
+        }
+        if (isNaN(b)) {
+            document.getElementById('spn').innerHTML="Please enter second number..";
+            return false;
+        }
+    }
+    function add()
+    {
+        document.getElementById('spn').innerHTML = "";
+        a = parseInt(document.getElementById("txt1").value);
+        b = parseInt(document.getElementById("txt2").value);
+        if (val() == false)
+            return;
+        alert("Addition result is: " +( a + b));
+    }
+    function sub() {
+        document.getElementById('spn').innerHTML = "";
+        a = parseInt(document.getElementById("txt1").value);
+         b = parseInt(document.getElementById("txt2").value);
+        if (val() == false)
+            return;
+        alert("Subtraction result is: " + (a - b));
+    }
+    function mul() {
+        a = parseInt(document.getElementById("txt1").value);
+        var b = parseInt(document.getElementById("txt2").value);
+        if (val() == false)
+            return;
+        alert("Multiplication result is: " + (a * b));
+    }
+    function div() {
+        document.getElementById('spn').innerHTML = "";
+        a = parseInt(document.getElementById("txt1").value);
+         b = parseInt(document.getElementById("txt2").value);
+        if (val() == false)
+            return;
+        alert("Devision result is: " + (a / b));
+    }
+    function mad() {
+        document.getElementById('spn').innerHTML = "";
+        a = parseInt(document.getElementById("txt1").value);
+         b = parseInt(document.getElementById("txt2").value);
+        if (val() == false)
+            return;
+        alert("Mad result is: " + (a % b));
+    }
+
+</script>
+}
